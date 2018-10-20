@@ -1,0 +1,103 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mover {
+  width: 150px;
+  height: 150px;
+  background: lightblue;
+
+  transform: translate(50px, 100px);
+}
+
+.rotar {
+  width: 150px;
+  height: 150px;
+  background: pink;
+
+  transform: rotate(45deg) translate(20px, 40px);
+}
+
+.escalar {
+  width: 150px;
+  height: 150px;
+  background: lightgreen;
+  transform: scale(0.5) rotate(45deg);
+  transition: all 5s;
+}
+
+.escalar:hover {
+  transform: scale(1.4);
+  background: peru;
+  width: 100%;
+}
+
+.animaciones {
+  margin-top: 200px;
+}
+
+
+@keyframes coderhouse {
+  0% {
+    transform: rotate(0deg) translate(0.0);
+    background: purple;
+  }
+  25% {
+    transform: rotate(30deg) translate(100px, -50px);
+    background: yellow;
+  }
+  50% {
+    transform: rotate(-20deg) translate(250px, 150px);
+    background: red;
+  }
+  100% {
+    transform: rotate(0deg) translate(0,0);
+    background: purple;
+  }
+}
+
+.animaciones .animar {
+  width: 100px;
+  height: 100px;
+  background: purple;
+
+  animation-name: coderhouse;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+
+}
+
+@keyframes cog1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.position_absolute div i {
+  font-size: 8.7rem;
+  right: 50%;
+  position: absolute;
+  left: 0px;
+  top: 120px;
+
+  animation-name: cog1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0.1s;
+}
+
+.position_relative div i {
+  font-size: 4.2rem;
+  right: 75%;
+  position: relative;
+  left: 100px;
+  top: 125px;
+}
